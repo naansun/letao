@@ -1,0 +1,154 @@
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+.letao_left {
+    width: 180px;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #222D32;
+    z-index: 999;
+    transition: all 1s;
+}
+
+.letao_left.hidetag {
+    left: -180px;
+}
+
+.lt_title {
+    height: 50px;
+    background-color: #367FA9;
+    line-height: 50px;
+}
+
+.lt_title a {
+    display: block;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+}
+
+.lt_user {
+    width: 180px;
+    height: 180px;
+    padding-top: 40px;
+}
+
+.lt_user img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.lt_user p {
+    color: #fff;
+    line-height: 40px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.letao_left ul {
+    padding: 0px;
+}
+
+.letao_left ul li a {
+    height: 40px;
+    display: block;
+    color: #fff;
+    line-height: 40px;
+    padding-left: 40px;
+    border-left: 3px solid transparent;
+}
+
+.letao_left ul li a.current {
+    background-color: #1D1F21;
+    border-left: 3px solid #006699;
+}
+
+.letao_left ul li a i {
+    margin-right: 5px;
+}
+
+.letao_left ul li .child {
+    display: none;
+}
+
+.letao_left ul li .child a {
+    padding-left: 60px;
+}
+
+/* 内容可信区域 */
+.letao_content {
+    /* background-color: pink; */
+    height: 2000px;
+    padding-left: 180px;
+    transition: all 1s;
+
+}
+
+.letao_content.hidetag {
+    padding-left: 0px;
+}
+
+.lt_top {
+    height: 50px;
+    background-color: #3C8DBC;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 180px;
+    transition: all 1s;
+}
+
+.lt_top.hidetag {
+    padding-left: 0;
+}
+
+.lt_top a {
+    color: #fff;
+}
+
+.icon-left,
+.icon-right {
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    font-size: 18px;
+}
+
+.lt_info {
+    background-color: #fff;
+    height: 100%;
+    padding-top: 50px;
+}
+
+.lt_info .mt_20 {
+    margin-top: 20px;
+}
+
+.breadcrumb>.active {
+    color: #777;
+}
+
+/* 模态框样式设置 */
+#myModal .modal-body {
+    color: #B05351;
+}
+
+/* 数据可视化的容器设置 */
+.lt_info .echarts_left,
+.echarts_right {
+    width: 48%;
+    height: 400px;
+    background-color: skyblue;
+}

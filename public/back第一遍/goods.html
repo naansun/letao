@@ -28,15 +28,15 @@
                 </a>
             </li>
             <li>
-                <a href="#" id='change'> <i class="glyphicon glyphicon-list"></i><span>分类管理</span>
+                <a href="javascript:;" id='change'> <i class="glyphicon glyphicon-list"></i><span>分类管理</span>
                 </a>
-                <div class="child">
-                    <a href="#">一级分类</a>
-                    <a href="#">二级分类</a>
+                <div class="child" style="display:block">
+                    <a href="first.html">一级分类</a>
+                    <a href="second.html">二级分类</a>
                 </div>
             </li>
             <li>
-                <a href="goods.html"> <i class="glyphicon glyphicon-tags"></i><span>商品管理</span>
+                <a href="goods.html" class="current"> <i class="glyphicon glyphicon-tags"></i><span>商品管理</span>
                 </a>
             </li>
         </ul>
@@ -55,42 +55,15 @@
                 <!-- 路径导航 -->
                 <ol class="breadcrumb mt_20">
                     <li><a href="#">管理系统</a></li>
-                    <li class="active">首页</li>
+                    <li class="active">商品管理</li>
                 </ol>
-                <!-- 数据可视化区域 -->
-                <div class="echarts_left pull-left"></div>
-                <div class="echarts_right pull-right"></div>
-            </div>
-        </div>
-    </div>
-    <!-- 模态框 -->
-    <div class="modal fade" tabindex="-1" id="myModal">
-        <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
-                    <h4 class="modal-title">
-                        温馨提示
-                    </h4>
-                </div>
-                <div class="modal-body">
-                    <i class="glyphicon glyphicon-info-sign"></i>
-                    <span> 您确定要退出后台管理系统吗</span>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                    <button type="button" class="btn btn-primary" id="exit">退出</button>
-                </div>
             </div>
         </div>
     </div>
     <script src="./lib/jquery/jquery.js"></script>
     <script src="./lib/bootstrap/js/bootstrap.js"></script>
     <script src="./lib/nprogress/nprogress.js"></script>
-    <script src="./lib/echarts/echarts.min.js"></script>
     <script src="./js/common.js"></script>
-    <script src="./js/index.js"></script>
-    <script src="./js/islogin.js"></script>
 </body>
 
 </html>
