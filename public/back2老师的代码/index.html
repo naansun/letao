@@ -27,7 +27,7 @@
   <!-- 导航 -->
   <div class="nav">
     <ul>
-      <li><a class="current" href="user.html"><i class="glyphicon glyphicon-user"></i><span>用户管理</span></a></li>
+      <li><a href="user.html"><i class="glyphicon glyphicon-user"></i><span>用户管理</span></a></li>
       <li>
         <a href="javascript:;" id="category"><i class="glyphicon glyphicon-list"></i><span>分类管理</span></a>
         <!-- 用于切换显示的二级列表 -->
@@ -57,46 +57,17 @@
     <!-- 链接导航, 路径导航 -->
     <ol class="breadcrumb mt_20">
       <li><a href="index.html">管理系统</a></li>
-      <li class="active">用户管理</li>
+      <li class="active">首页</li>
     </ol>
 
+    <!-- 两个图表, 要求要是有宽高的容器 -->
     <div class="lt_content">
-      <table class="table table-bordered table-hover">
-        <thead>
-          <tr>
-            <th>序号</th>
-            <th>用户名</th>
-            <th>手机号</th>
-            <th>状态</th>
-            <th>操作</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>itcast</td>
-            <td>15757771111</td>
-            <td>正常</td>
-            <td><button class="btn btn-danger">禁用</button></td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>itcast</td>
-            <td>15757771111</td>
-            <td>正常</td>
-            <td><button class="btn btn-danger">禁用</button></td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>itcast</td>
-            <td>15757771111</td>
-            <td>正常</td>
-            <td><button class="btn btn-danger">禁用</button></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
 
+      <div class="echarts_left pull-left"></div>
+
+      <div class="echarts_right pull-right"></div>
+
+    </div>
 
   </div>
 
@@ -135,8 +106,10 @@
 <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
 <script src="./lib/nprogress/nprogress.js"></script>
+<script src="./lib/echarts/echarts.min.js"></script>
 <script src="./js/common.js"></script>
 <script src="./js/isLogin.js"></script>
+<script src="./js/index.js"></script>
 
 
 </body>

@@ -1,3 +1,4 @@
+/* 首页左侧 */
 a:link,
 a:visited,
 a:hover,
@@ -5,41 +6,40 @@ a:active {
     text-decoration: none;
 }
 
-.letao_left {
+.lt_left {
     width: 180px;
     height: 100%;
+    background-color: #222D32;
     position: fixed;
     left: 0;
     top: 0;
-    background-color: #222D32;
     z-index: 999;
     transition: all 1s;
 }
 
-.letao_left.hidetag {
+.lt_left.hidetag {
     left: -180px;
 }
 
-.lt_title {
+.lt_left .lt_title {
     height: 50px;
-    background-color: #367FA9;
     line-height: 50px;
+    background-color: #367FA9;
 }
 
-.lt_title a {
+.lt_left .lt_title a {
     display: block;
-    text-align: center;
     color: #fff;
     font-size: 20px;
+    text-align: center;
 }
 
-.lt_user {
-    width: 180px;
+.lt_left .user {
     height: 180px;
-    padding-top: 40px;
+    padding-top: 30px;
 }
 
-.lt_user img {
+.lt_left .user img {
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -47,115 +47,95 @@ a:active {
     margin: 0 auto;
 }
 
-.lt_user p {
+.lt_left .user p {
     color: #fff;
-    line-height: 40px;
     font-size: 18px;
+    line-height: 40px;
     text-align: center;
 }
 
-.letao_left ul {
+.lt_left ul {
     padding: 0px;
+    margin: 0px;
 }
 
-.letao_left ul li a {
-    height: 40px;
+.lt_left ul li a {
     display: block;
+    height: 40px;
     color: #fff;
-    line-height: 40px;
     padding-left: 40px;
+    line-height: 40px;
     border-left: 3px solid transparent;
 }
 
-.letao_left ul li a.current {
-    background-color: #1D1F21;
+.lt_left ul li a.current {
     border-left: 3px solid #006699;
+    background-color: #1D1F21;
 }
 
-.letao_left ul li a i {
+.lt_left ul li i {
     margin-right: 5px;
 }
 
-.letao_left ul li .child {
+.lt_left ul li .child {
     display: none;
 }
 
-.letao_left ul li .child a {
+.lt_left ul li .child a {
     padding-left: 60px;
 }
 
-/* 内容可信区域 */
-.letao_content {
-    /* background-color: pink; */
-    height: 2000px;
+/* 核心内容区域 */
+.lt_content {
     padding-left: 180px;
+    height: 2000px;
     transition: all 1s;
-
 }
 
-.letao_content.hidetag {
+.lt_content.hidetag {
     padding-left: 0px;
 }
 
 .lt_top {
-    height: 50px;
-    background-color: #3C8DBC;
+    width: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    height: 50px;
+    background-color: #3C8DBC;
     padding-left: 180px;
     transition: all 1s;
 }
 
 .lt_top.hidetag {
-    padding-left: 0;
+    padding-left: 0px;
 }
 
 .lt_top a {
     color: #fff;
 }
 
-.icon-left,
+.lt_top .icon-left,
 .icon-right {
     width: 50px;
     height: 50px;
-    display: block;
+    color: #fff;
+    font-size: 20px;
     text-align: center;
     line-height: 50px;
-    font-size: 18px;
 }
 
-.lt_info {
-    background-color: #fff;
+.lt_main {
+    background-color: pink;
     height: 100%;
     padding-top: 50px;
 }
 
-.lt_info .mt_20 {
+.mt_20 {
     margin-top: 20px;
 }
 
-.breadcrumb>.active {
-    color: #777;
-}
-
 /* 模态框样式设置 */
-#myModal .modal-body {
-    color: #B05351;
-}
-
-/* 数据可视化的容器设置 */
-.lt_info .echarts_left,
-.echarts_right {
-    width: 48%;
-    height: 400px;
-    background-color: skyblue;
-}
-
-/* 表格的设置 */
-.table.table-bordered th,
-.table.table-bordered td {
-    text-align: center;
-    vertical-align: middle;
+.modal .modal-body {
+    color: #A94442;
 }
