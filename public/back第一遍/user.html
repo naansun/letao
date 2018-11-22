@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>乐淘首页</title>
+    <title>用户管理页</title>
     <link rel="stylesheet" href="./lib/nprogress/nprogress.css">
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="./css/common.css">
@@ -72,6 +72,54 @@
                         <!-- 动态渲染 -->
                     </tbody>
                 </table>
+
+
+                <!-- 分页插件的使用:基于bootstrap  如果是3的版本  容器为ul -->
+                <div class="text-right">
+                    <ul id="pagintor"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 退出模态框 -->
+    <div class="modal fade" tabindex="-1" id="myModal">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                    <h4 class="modal-title">
+                        温馨提示
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <i class="glyphicon glyphicon-info-sign"></i>
+                    <span> 您确定要退出后台管理系统吗</span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" id="exit">退出</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 启用禁用模态框 -->
+    <div class="modal fade" tabindex="-1" id="userModal">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                    <h4 class="modal-title">
+                        温馨提示
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <i class="glyphicon glyphicon-info-sign"></i>
+                    <span>你确定要执行此操作吗？</span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" id="sure">确定</button>
+                </div>
             </div>
         </div>
     </div>
@@ -80,11 +128,12 @@
         {{each rows v i}}
         <!-- isDelete 1正常  0已禁用-->
         <tr>
-            <td>1</td>
+            <td>{{i+1+(page-1)*size}}</td>
             <td>{{v.username}}</td>
             <td>{{v.mobile}}</td>
             <td>{{v.isDelete === 1 ? '正常':'已禁用'}}</td>
-            <td>
+            <!-- data-id   将用户的id保存起来，便于后面的使用 -->
+            <td data-id={{v.id}}>
                 {{if v.isDelete === 1}}
               <button class="btn btn-success">禁用</button>
               {{else}}
@@ -99,12 +148,16 @@
     <script src="./lib/jquery/jquery.js"></script>
     <!-- 响应式布局插件 -->
     <script src="./lib/bootstrap/js/bootstrap.js"></script>
+    <!-- 分页的插件 -->
+    <script src="./lib/bootstrap-paginator/bootstrap-paginator.js"></script>
     <!-- 进度条插件 -->
     <script src="./lib/nprogress/nprogress.js"></script>
     <!-- 模板引擎插件 -->
     <script src="./lib/artTemplate/template-web.js"></script>
     <!-- 公共功能插件   自定义 -->
     <script src="./js/common.js"></script>
+    <!-- 用来判断用户是否登陆过的js功能  自定义 -->
+    <script src="./js/islogin.js"></script>
     <!-- 自身的js功能 -->
     <script src="./js/user.js"></script>
 </body>

@@ -141,7 +141,7 @@ a:active {
 }
 
 /* 模态框样式设置 */
-#myModal .modal-body {
+.modal-body {
     color: #B05351;
 }
 
