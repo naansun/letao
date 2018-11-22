@@ -57,6 +57,21 @@
                     <li><a href="#">管理系统</a></li>
                     <li class="active">用户管理</li>
                 </ol>
+                <!-- 添加分类按钮 -->
+                <button class="btn btn-default">添加分类</button>
+                <!-- 内容表格区域 -->
+                <table class="table table-bordered table-hover mt_20">
+                    <thead>
+                        <tr>
+                            <th width=30%>序号</th>
+                            <th width=70%>一级分类名</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- 模板内容 -->
+                    </tbody>
+                </table>
+
             </div>
         </div>
     </div>
@@ -81,6 +96,16 @@
             </div>
         </div>
     </div>
+
+    <!-- 模板引擎 -->
+    <script type="text/html" id="first">
+        {{each rows v i}}
+        <tr>
+           <td>{{i+1}}</td>
+          <td>{{v.categoryName}}</td>
+        </tr>
+        {{/each}}
+    </script>
     <script src="./lib/jquery/jquery.js"></script>
     <!-- 响应式布局插件 -->
     <script src="./lib/bootstrap/js/bootstrap.js"></script>
@@ -95,7 +120,7 @@
     <!-- 用来判断用户是否登陆过的js功能  自定义 -->
     <script src="./js/islogin.js"></script>
     <!-- 自身的js功能 -->
-    <script src="./js/user.js"></script>
+    <script src="./js/first.js"></script>
 </body>
 
 </html>
