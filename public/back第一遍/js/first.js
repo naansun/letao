@@ -72,4 +72,31 @@ $(function () {
         }
 
     })
+
+
+    // 功能四：//1.1  阻止默认的表单提交行为。
+    //1.2点击添加按钮发送ajax请求，向数据库中添加数据 渲染页面
+    $("#form").on('success.form.bv', function (e) {
+        e.preventDefault();
+        $.ajax({
+            type: 'post',
+            url: '/category/addTopCategory',
+            data: $('#form').serialize(),
+            dataType: 'json',
+            success: function (info) {
+                // console.log(info);
+                if (info.success) {
+                    $('#addModal').modal('hide');
+                    // 显示第一页
+                    currentPage = 1;
+                    render();
+
+                    //内容和状态重置
+                    $("#form").data('bootstrapValidator').resetForm(true);
+                }
+            }
+
+
+        })
+    });
 })
