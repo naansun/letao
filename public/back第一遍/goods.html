@@ -133,32 +133,36 @@
                                     <!-- 下拉列表模板引擎内容 -->
                                 </ul>
                             </div>
-                            <input type="hidden" name="categoryId">
-                            <!-- 火热的品牌   1表示火热   0表示不火热   默认都火热 -->
-                            <input type="hidden" name="hot" value="1">
+                            <input type="hidden" name="brandId">
+                            <!-- 产品上下架, 默认上架(1) -->
+                            <input type="hidden" name="statu" value="1">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" name="brandName" placeholder="请输入商品名称">
+                            <input type="text" class="form-control" name="proName" placeholder="请输入商品名称">
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" rows="3" placeholder="请输入商品描述"></textarea>
+                            <textarea class="form-control" rows="3" name="proDesc" placeholder="请输入商品描述"></textarea>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" name="brandName" placeholder="请输入商品库存">
+                            <input type="text" class="form-control" name="num" placeholder="请输入商品库存">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" name="brandName" placeholder="请输入商品尺寸">
+                            <input type="text" class="form-control" name="size" placeholder="请输入商品尺寸">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" name="brandName" placeholder="请输入商品原价">
+                            <input type="text" class="form-control" name="oldPrice" placeholder="请输入商品原价">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" name="brandName" placeholder="请输入商品现价">
+                            <input type="text" class="form-control" name="price" placeholder="请输入商品现价">
                         </div>
                         <div class="form-group">
                             <label for="fileupload" class="btn btn-default">上传图片</label>
-                            <input id="fileupload" type="file" name="pic1" data-url="/category/addSecondCategoryPic"
-                                style="display:none">
+                            <input id="fileupload" type="file" name="pic1" data-url="/product/addProductPic" style="display:none"
+                                multiple>
+                        </div>
+                        <div class="form-group" id="img">
+                            <!-- <img src="./images/none.png" style="width:100px"> -->
+                            <input type="hidden" name="picstatus">
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -169,6 +173,12 @@
             </div>
         </div>
     </div>
+    <!-- 下拉列表模板创建 -->
+    <script type="text/html" id="list">
+        {{each rows v i}}
+        <li><a href="#" data-id = {{v.id}}>{{v.brandName}}</a></li>
+        {{/each}}
+    </script>
 
     <!-- 动态渲染数据内容 -->
     <script type="text/html" id="goods">
@@ -190,6 +200,8 @@
             </tr>
        {{/each}}
     </script>
+
+
     <script src="./lib/jquery/jquery.js"></script>
     <!-- 响应式布局插件 -->
     <script src="./lib/bootstrap/js/bootstrap.js"></script>

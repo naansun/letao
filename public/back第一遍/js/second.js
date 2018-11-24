@@ -77,6 +77,7 @@ $(function () {
 
     })
 
+
     // 功能四：文件上传
     $("#fileupload").fileupload({
         dataType: "json",
@@ -131,6 +132,7 @@ $(function () {
             },
         }
     })
+
 
     //功能六：点击按钮阻止表单的默认行为后   并发送Ajax请求 
     $("#form").on('success.form.bv', function (e) {
