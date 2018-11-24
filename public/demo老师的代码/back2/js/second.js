@@ -141,6 +141,37 @@ $(function() {
         }
       }
     }
+  });
+
+
+
+  // 6. 注册表单校验成功事件, 阻止默认的提交, 通过 ajax 提交
+  $('#form').on("success.form.bv", function( e ) {
+    e.preventDefault();
+
+    $.ajax({
+      type: "post",
+      url: "/category/addSecondCategory",
+      data: $('#form').serialize(),
+      dataType: "json",
+      success: function( info ) {
+        console.log( info );
+        if ( info.success ) {
+          // 添加成功
+          $('#addModal').modal("hide");
+          // 重新更新第一页
+          currentPage = 1;
+          render();
+
+          // 重置表单内容和状态
+          $('#form').data("bootstrapValidator").resetForm(true);
+
+          // 由于下拉框 和 图片, 不是表单元素, 需要手动重置
+          $('#dropdownText').text("请选择一级分类"); // 重置按钮文本
+          $('#imgBox img').attr("src", "./images/none.png");
+        }
+      }
+    })
   })
 
 })

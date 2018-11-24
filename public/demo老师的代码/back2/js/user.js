@@ -1,12 +1,12 @@
 /**
  * Created by 54721 on 2018/11/22.
  */
-$(function () {
+$(function() {
 
   var currentPage = 1; // 当前页
   var pageSize = 5; // 每页条数
 
-  var currentId; // 当前编辑的用户 id
+  var currentId;  // 当前编辑的用户 id
   var isDelete; // 修改的状态
 
   // 1. 一进入页面, 发送ajax请求, 获取用户列表数据, 通过模板引擎渲染
@@ -21,20 +21,20 @@ $(function () {
         pageSize: pageSize
       },
       dataType: "json",
-      success: function (info) {
-        console.log(info);
+      success: function( info ) {
+        console.log( info );
         // template( 模板id, 数据对象 )
         var htmlStr = template("tmp", info);
-        $('tbody').html(htmlStr);
+        $('tbody').html( htmlStr );
 
         // 根据后台返回的数据, 进行分页初始化
         $('#paginator').bootstrapPaginator({
           bootstrapMajorVersion: 3, // 版本号
           currentPage: info.page, // 当前页
-          totalPages: Math.ceil(info.total / info.size), // 总页数
+          totalPages: Math.ceil( info.total / info.size ), // 总页数
           // 给页码添加点击事件
-          onPageClicked: function (a, b, c, page) {
-            console.log(page);
+          onPageClicked: function( a, b, c, page ) {
+            console.log( page );
             // 根据 page 重新请求数据, 进行渲染
             currentPage = page; // 更新当前页
 
@@ -58,7 +58,7 @@ $(function () {
 
 
   // 2. 点击启用禁用按钮, 显示模态框(事件委托)
-  $('tbody').on("click", ".btn", function () {
+  $('tbody').on("click", ".btn", function() {
     // 显示模态框
     $('#userModal').modal("show");
 
@@ -71,7 +71,7 @@ $(function () {
   });
 
   // 3. 点击模态框确认按钮, 完成用户的启用禁用
-  $('#submitBtn').click(function () {
+  $('#submitBtn').click(function() {
 
     $.ajax({
       type: "post",
@@ -81,11 +81,11 @@ $(function () {
         isDelete: isDelete // 将用户改成什么状态, 1启用, 0禁用
       },
       dataType: "json",
-      success: function (info) {
-        console.log(info)
-        if (info.success) {
+      success: function( info ) {
+        console.log( info )
+        if ( info.success ) {
           // 关闭模态框
-          $('#userModal').modal("hide"); // show hide
+          $('#userModal').modal("hide");  // show hide
           // 重新渲染页面
           render();
         }

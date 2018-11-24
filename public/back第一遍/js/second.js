@@ -147,10 +147,15 @@ $(function () {
                     // 隐藏模态框
                     $('#secModal').modal('hide');
                     // 重新渲染
+                    currentPage = 1;
                     render();
 
                     //内容和状态重置
                     $("#form").data('bootstrapValidator').resetForm(true);
+                    // 手动设置按钮和文本的内容
+                    $('#addtxt').text('请选择一级分类');
+                    $('#imgbox').remove();
+
 
                 }
 
