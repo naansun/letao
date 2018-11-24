@@ -1,0 +1,111 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+h3 {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.lt_container {
+    width: 100%;
+    height: 100%;
+    background-color: pink;
+    max-width: 640px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding-top: 45px;
+    padding-bottom: 55px;
+    position: relative;
+    overflow: hidden;
+}
+
+.lt_header {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 45px;
+    background-color: #006699;
+    padding: 0 45px;
+    text-align: center;
+}
+
+.lt_header h3 {
+    line-height: 45px;
+    height: 45px;
+    font-weight: normal;
+    font-size: 20px;
+    color: #fff;
+}
+
+.lt_footer {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #006699;
+    height: 55px;
+}
+
+.lt_header .icon-left,
+.lt_header .icon-right {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 0;
+    display: block;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+}
+
+.lt_header .icon-left {
+    left: 0;
+}
+
+.lt_header .icon-right {
+    right: 0;
+}
+
+.lt_footer ul li {
+    width: 25%;
+    float: left;
+    text-align: center;
+    height: 55px;
+}
+
+.lt_footer ul li a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding-top: 8px;
+    color: #fff;
+}
+
+.lt_footer ul li a.current {
+    color: #FFA500;
+}
+
+.lt_footer ul li a.current p {
+    color: #FFA500;
+}
+
+.lt_footer ul li a p {
+    color: #fff;
+}
+
+/* 乐淘主体 */
+.lt_main {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
