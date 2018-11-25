@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 视口设置 -->
+    <meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'>
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>手机端分类页</title>
+    <!-- 引入字体库的css样式 -->
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
+    <!-- 引入移动端的开发框架 -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <!-- 引入自定义的公共样式 -->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- 自己的css样式 -->
+    <link rel="stylesheet" href="./css/category.css">
+</head>
+
+<body>
+    <!-- 全屏容器 -->
+    <div class="lt_container">
+        <!-- 头部区域-->
+        <div class="lt_header">
+            <a href="index.html" class="icon-left">
+                <i class="fa fa-home"></i>
+            </a>
+            <h3>乐淘云购</h3>
+            <a href="search.html" class="icon-right">
+                <i class="fa fa-search"></i>
+            </a>
+        </div>
+        <!-- 内容区域 -->
+        <div class="lt_main">
+            <div class="category_left">
+                <!-- 使用mui框架的区域滚动一 -->
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <ul class="cate_nav">
+                            <!-- 模板引擎内容 -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="category_right">
+                <!-- 区域滚动二 -->
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <ul class="mui-clearfix">
+                            <!-- 二级模板引擎内容 -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 底部区域 -->
+        <div class="lt_footer">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <i class="fa fa-home"></i>
+                        <p>首页</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="category.html" class="current">
+                        <i class="fa fa-bars"></i>
+                        <p>分类页</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="cart.html">
+                        <i class="fa fa-shopping-cart"></i>
+                        <p>购物车</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="user.html">
+                        <i class="fa fa-user"></i>
+                        <p>用户中心</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 一级分类内容  模板引擎 -->
+    <script type="text/html" id="first">
+        {{each rows v i}}
+        <li><a href="#" data-id={{v.id}} class="{{i===0?'current':''}}">{{v.categoryName}}</a></li>
+        {{/each}}
+    </script>
+    <!-- 二级分类内容  模板引擎 -->
+    <script type="text/html" id="second">
+        {{if rows.length===0}}
+        <p class="text">没有更多信息了~</p>
+        {{else}}
+        {{each rows v i}}
+        <li>
+            <a href="#">
+                <img src="{{v.brandLogo}}" alt="">
+                <p>{{v.brandName}}</p>
+            </a>  
+        </li>
+        {{/each}}
+
+        {{/if}}
+    </script>
+
+    <!-- mui框架 -->
+    <script src="./lib/mui/js/mui.js"></script>
+    <!-- 类似于jq插件 -->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- 模板引擎 -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <!-- 公共js功能   自定义 -->
+    <script src="./js/common.js"></script>
+    <!-- 自身的js  自定义 -->
+    <script src="./js/category.js"></script>
+</body>
+
+</html>

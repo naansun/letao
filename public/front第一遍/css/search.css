@@ -1,0 +1,35 @@
+/* 搜索框设置 */
+
+.lt_search {
+  padding: 10px;
+  position: relative;
+}
+
+.lt_search input {
+  height: 34px;
+  border-radius: 5px;
+  font-size: 12px;
+  border: 1px solid #007aff;
+  margin: 0;
+}
+
+.lt_search button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.lt_content {
+  padding: 10px;
+}
+
+.lt_title {
+  height: 30px;
+  line-height: 30px;
+}
+
+.lt_title span {
+  font-size: 12px;
+  color: #666;
+}

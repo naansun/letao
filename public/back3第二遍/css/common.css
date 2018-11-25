@@ -126,7 +126,7 @@ a:active {
 }
 
 .lt_main {
-    background-color: pink;
+    /* background-color: pink; */
     height: 100%;
     padding-top: 50px;
 }
@@ -138,4 +138,13 @@ a:active {
 /* 模态框样式设置 */
 .modal .modal-body {
     color: #A94442;
+}
+
+/* 盛放数据可视化的盒子样式设置 */
+.e_left,
+.e_right {
+    width: 48%;
+    height: 400px;
+    /* background-color: skyblue; */
+
 }

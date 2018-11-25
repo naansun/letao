@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- 视口设置 -->
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>搜索页</title>
+    <!-- 引入字体库的css样式 -->
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.css" />
+    <!-- 引入移动端的开发框架 -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.css" />
+    <!-- 引入自定义的公共样式 -->
+    <link rel="stylesheet" href="./css/common.css" />
+    <!-- 引入自己的样式设置 -->
+    <link rel="stylesheet" href="./css/search.css" />
+  </head>
+
+  <body>
+    <!-- 全屏容器 -->
+    <div class="lt_container">
+      <!-- 头部区域 -->
+      <div class="lt_header">
+        <a href="javascript:history.back();" class="icon-left">
+          <i class="mui-icon mui-icon-back"></i>
+        </a>
+        <h3>搜索中心</h3>
+      </div>
+      <!-- 内容区域 -->
+      <div class="lt_main">
+        <!-- 使用mui框架的区域滚动 -->
+        <div class="mui-scroll-wrapper">
+          <div class="mui-scroll">
+            <div class="lt_search">
+              <input type="text" placeholder="请输入搜索内容" />
+              <button class="mui-btn mui-btn-primary">搜索</button>
+            </div>
+            <div class="lt_content">
+              <div class="lt_title">
+                <span class="mui-pull-left">搜索历史</span>
+                <span class="mui-pull-right">
+                  <i class="fa fa-trash"></i> 清空记录</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 底部区域 -->
+      <div class="lt_footer">
+        <ul>
+          <li>
+            <a href="index.html">
+              <i class="fa fa-home"></i>
+              <p>首页</p>
+            </a>
+          </li>
+          <li>
+            <a href="category.html">
+              <i class="fa fa-bars"></i>
+              <p>分类页</p>
+            </a>
+          </li>
+          <li>
+            <a href="cart.html">
+              <i class="fa fa-shopping-cart"></i>
+              <p>购物车</p>
+            </a>
+          </li>
+          <li>
+            <a href="user.html">
+              <i class="fa fa-user"></i>
+              <p>用户中心</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- mui框架 -->
+    <script src="./lib/mui/js/mui.js"></script>
+    <!-- 类似于jq插件 -->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- 模板引擎 -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <!-- 公共js功能   自定义 -->
+    <script src="./js/common.js"></script>
+  </body>
+</html>
